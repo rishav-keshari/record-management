@@ -1,0 +1,48 @@
+.main{
+    margin-left: 80px;
+}
+.export-btn{
+    align-self: center;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+    width: 200px;
+
+  }
+
+  .export-modal-btn{
+    margin-right: 25px;
+    width: 200px;
+  }
+
+
+.example-container {
+    height: 100%;
+    overflow: auto;
+  }
+  
+table {   
+       width: 100%;
+  }
+
+.filter{
+    font-size: 14px;
+    width: 40% !important;
+  }
+
+.action-btn{
+    
+    margin-right: 20px;
+  }
+
+.mat-form-field{
+    width: 100%;
+}
+
+.modal-footer{
+    align-self: center !important;
+}
+
+h1 {
+  margin-left:40%;
+}

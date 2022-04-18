@@ -1,0 +1,25 @@
+<mat-toolbar color="primary" >
+  <mat-toolbar-row>
+    <button mat-icon-button>
+      <mat-icon (click)="sidenav.toggle();">menu</mat-icon>
+    </button>
+    <h1>Ganesh Grain Store</h1>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-sidenav-container style="z-index: 2000;">
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+      <a mat-list-item routerLink="/additem" (click)="sidenav.close()">Add Item</a>
+      <a mat-list-item routerLink="/addparty" (click)="sidenav.close()">Add Party</a>
+      <a mat-list-item routerLink="/addpurchase" (click)="sidenav.close()">Add Purchase</a>
+      <a mat-list-item routerLink="/addsale" (click)="sidenav.close()">Add Sale</a>
+      <a mat-list-item routerLink="/report" (click)="sidenav.close()">Purchase Report</a>
+      <a mat-list-item routerLink="/sales-report" (click)="sidenav.close()">Sale Report</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content >
+    <div style="height: 88vh;" >
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

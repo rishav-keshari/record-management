@@ -1,0 +1,171 @@
+<div class="main" >
+    <h1>SALE DETAILS </h1>
+
+    <form class="example-form" [formGroup]="formValue">
+        <table class="example-full-width" cellspacing="0">
+            <tr>
+                <td>        
+                    <mat-form-field  class="example-full-width" appearance="outline" >
+                    <mat-label>Bill Date</mat-label>
+                    <input type="date" matInput formControlName="billDate" >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <!-- <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Party Name</mat-label>
+                        <input matInput type="text" formControlName="partyName"  >
+                    </mat-form-field> -->
+                    <!-- <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Party Name</mat-label>
+                        <input type="text" matInput [matAutocomplete]="auto" [formControl]="controlPartyName" (change)="select($event)"/>
+                        <mat-autocomplete  #auto="matAutocomplete" >
+                            <mat-option *ngFor="let option of filteredPartyOptions | async" [value]="option" >
+                                {{option}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field> -->
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Party Name</mat-label>
+                        <input matInput type="text" [matAutocomplete]="auto" formControlName="partyName" >
+                        <mat-autocomplete #auto="matAutocomplete" #myOption>
+                            <mat-option (click)="routeToParty()" [value]="">Add Party</mat-option>
+                            <mat-option *ngFor="let party of filteredPartyOptions" [value]="party">
+                                {{party}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Address</mat-label>
+                        <textarea matInput formControlName="address"  placeholder="Ex. 100 Main St"></textarea>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>GST</mat-label>
+                        <input matInput  type="text" formControlName="gstNum" >
+                    </mat-form-field>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <mat-form-field  appearance="outline" >
+                        <mat-label>CustomerBill Date</mat-label>
+                        <input type="date" matInput formControlName="cust_billDate" >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Invoice No.</mat-label>
+                        <input matInput type="text" formControlName="invoiceNum" >
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <!-- <mat-form-field  appearance="outline">
+                        <mat-label>Item Name</mat-label>
+                        <input matInput formControlName="itemName"  >
+                    </mat-form-field> -->
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Item Name</mat-label>
+                        <input matInput type="text" [matAutocomplete]="auto_item" formControlName="itemName" >
+                        <mat-autocomplete #auto_item="matAutocomplete" #myOption>
+                            <mat-option (click)="routeToItem()" [value]="">Add Item</mat-option>
+                            <mat-option *ngFor="let item of filteredItemOptions" [value]="item">
+                                {{item}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>HSN Code</mat-label>
+                        <input matInput formControlName="hsnCode"  >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Bag</mat-label>
+                        <input matInput  formControlName="saleBag" >
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Weight</mat-label>
+                        <input matInput formControlName="saleWeight"  >
+                    </mat-form-field>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Tax Free Value</mat-label>
+                        <input matInput  formControlName="taxFreeValue" (keyup)="setTotal($event)">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>Tax Invoice Value</mat-label>
+                        <input matInput  formControlName="taxInvoiceValue" (keyup)="setTotal($event)">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>CGST</mat-label>
+                        <input matInput  formControlName="cgst" (keyup)="setTotal($event)">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>SGST</mat-label>
+                        <input matInput formControlName="sgst"  (keyup)="setTotal($event)">
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>IGST</mat-label>
+                        <input matInput formControlName="igst"  (keyup)="setTotal($event)">
+                    </mat-form-field>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>TDS</mat-label>
+                        <input matInput  formControlName="tds" (keyup)="setTotal($event)">
+                        <mat-hint>TDS@0.1%</mat-hint>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline">
+                        <mat-label>TCS</mat-label>
+                        <input matInput  formControlName="tcs" (keyup)="setTotal($event)" (keyup)="setTotal($event)">
+                        <mat-hint>TCS@0.1%</mat-hint>
+                    </mat-form-field>
+                </td>
+                <td>
+                    <mat-form-field  appearance="outline"  >
+                        <mat-label>Grand Total</mat-label>
+                        <input matInput formControlName="grandTotal" >
+                    </mat-form-field>
+                </td>
+            </tr>
+
+
+        </table>
+
+
+      </form>
+        <div class="example-container">
+            <button  mat-raised-button color="primary"  class="addsale-btn" (click)="addSaleDetails()">Add Sale</button>
+        </div>
+      
+
+</div>        

@@ -1,0 +1,164 @@
+{
+  "party": [
+    {
+      "id": 1,
+      "partyName": "Arvind",
+      "address": "Raniganj",
+      "gstNum": "09sadawd",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "id": 2,
+      "partyName": "Manoj",
+      "address": "Bairia",
+      "gstNum": "09asjn34682",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "id": 3,
+      "partyName": "Rahul",
+      "address": "Deoria",
+      "gstNum": "09asc68",
+      "state": "Uttar Pradesh"
+    },
+    {
+      "id": 4,
+      "partyName": "sas",
+      "address": "asld sl wmclewm",
+      "gstNum": "19",
+      "state": "West Bengal"
+    }
+  ],
+  "item": [
+    {
+      "id": 2,
+      "itemName": "Wheat",
+      "hsnCode": "sakdx12",
+      "stockBag": "23",
+      "stockWeight": "67"
+    },
+    {
+      "id": 3,
+      "itemName": "Massor",
+      "hsnCode": "asda78",
+      "stockBag": "20",
+      "stockWeight": "2000"
+    },
+    {
+      "id": 4,
+      "itemName": "Rice",
+      "hsnCode": "SCNJS67",
+      "stockBag": "34",
+      "stockWeight": "800"
+    }
+  ],
+  "purchase": [
+    {
+      "id": 1,
+      "billDate": "2021-11-03",
+      "partyName": "Arvind",
+      "address": "Raniganj",
+      "gstNum": "09sadawd",
+      "cust_billDate": "2021-11-04",
+      "invoiceNum": "12",
+      "itemName": "Masoor",
+      "hsnCode": "ad3a",
+      "purchaseBag": "10",
+      "purchaseWeight": "6",
+      "taxFreeValue": "34",
+      "taxInvoiceValue": "56",
+      "cgst": "89",
+      "sgst": "7",
+      "igst": "8",
+      "tds": "9",
+      "tcs": "2",
+      "grandTotal": "205.00"
+    },
+    {
+      "id": 2,
+      "billDate": "2022-01-20",
+      "partyName": "Arvind",
+      "address": "Raniganj",
+      "gstNum": "09sadawd",
+      "cust_billDate": "2022-01-14",
+      "invoiceNum": "12",
+      "itemName": "Masoor",
+      "hsnCode": "ad3a",
+      "purchaseBag": "",
+      "purchaseWeight": "",
+      "taxFreeValue": "",
+      "taxInvoiceValue": "",
+      "cgst": "",
+      "sgst": "",
+      "igst": "",
+      "tds": "",
+      "tcs": "",
+      "grandTotal": ""
+    },
+    {
+      "id": 3,
+      "billDate": "2022-01-20",
+      "partyName": "Manoj",
+      "address": "Bairia",
+      "gstNum": "09asjn34682",
+      "cust_billDate": "2022-01-01",
+      "invoiceNum": "123",
+      "itemName": "Masoor",
+      "hsnCode": "ad3a",
+      "purchaseBag": "12",
+      "purchaseWeight": "21",
+      "taxFreeValue": "21",
+      "taxInvoiceValue": "",
+      "cgst": "",
+      "sgst": "",
+      "igst": "",
+      "tds": "",
+      "tcs": "",
+      "grandTotal": "21.00"
+    }
+  ],
+  "sale": [
+    {
+      "id": 1,
+      "billDate": "2022-01-30",
+      "partyName": "Arvind",
+      "address": "Raniganj",
+      "gstNum": "09sadawd",
+      "cust_billDate": "2022-01-29",
+      "invoiceNum": "12",
+      "itemName": "Masoor",
+      "hsnCode": "ad3a",
+      "saleBag": "12",
+      "saleWeight": "234",
+      "taxFreeValue": "34",
+      "taxInvoiceValue": "3",
+      "cgst": "2",
+      "sgst": "1",
+      "igst": "1",
+      "tds": "2",
+      "tcs": "3",
+      "grandTotal": "46.00"
+    },
+    {
+      "id": 2,
+      "billDate": "2022-01-30",
+      "partyName": "Manoj",
+      "address": "Bairia",
+      "gstNum": "09asjn34682",
+      "cust_billDate": "2022-01-15",
+      "invoiceNum": "122",
+      "itemName": "Wheat",
+      "hsnCode": "sakdx12",
+      "saleBag": "1",
+      "saleWeight": "50",
+      "taxFreeValue": "12",
+      "taxInvoiceValue": "2",
+      "cgst": "1",
+      "sgst": "1",
+      "igst": "12",
+      "tds": "2",
+      "tcs": "1",
+      "grandTotal": "31.00"
+    }
+  ]
+}

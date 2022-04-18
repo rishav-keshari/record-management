@@ -1,0 +1,37 @@
+
+
+.main{
+      margin-left: 80px;
+  }
+
+/* textarea{
+    height: 100px;
+
+  } */
+
+.addparty-btn{
+    margin-right: 25px;
+    width: 200px;
+}
+
+.example-container {
+    height: 100%;
+    overflow: auto;
+  }
+  
+  table {   
+       width: 100%;
+  }
+
+.filter{
+    font-size: 14px;
+    width: 40%;
+  }
+
+.action-btn{
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+
+
